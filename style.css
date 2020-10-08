@@ -1,0 +1,137 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: teal;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 0;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.container {
+  margin-top: 25vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.card {
+  width: 400px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.02),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.028), 0 12.5px 10px rgba(0, 0, 0, 0.035),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.042), 0 41.8px 33.4px rgba(0, 0, 0, 0.05),
+    0 100px 80px rgba(0, 0, 0, 0.07);
+  z-index: 100;
+  padding: 15px;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.form-input > label {
+  display: block;
+  margin-bottom: 3px;
+  text-transform: lowercase;
+}
+
+.form-input > input {
+  border-radius: 3px;
+  display: block;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  height: 20px;
+  padding: 3px 5px;
+}
+
+.form-input > input:focus {
+  border-color: teal;
+  box-shadow: 0 0 0 3px rgba(0, 128, 128, 0.5);
+  outline: none;
+}
+
+button {
+  margin-top: 30px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  color: teal;
+  background-color: transparent;
+  border: 2px solid teal;
+  border-radius: 3px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  color: white;
+  background-color: teal;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 128, 128, 0.5);
+}
+
+#errors {
+  z-index: 10;
+  background-color: hsl(0, 80%, 80%);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 15px;
+}
+
+.hidden {
+  display: none;
+}
+
+#errors > ul {
+  margin-top: 0;
+  padding: 0 0 0 20px;
+  list-style-type: decimal;
+}
+
+#success > p {
+  text-align: center;
+}
+
+dt,
+dd {
+  display: inline-block;
+  margin: 0;
+  padding: 8px;
+  margin-bottom: 3px;
+}
+
+dt {
+  width: 30%;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+dd {
+  background-color: rgba(0, 0, 0, 0.05);
+  font-weight: bold;
+  width: 60%;
+  border-left: none;
+}
+
+.required > label:after {
+  content: "*";
+  color: red;
+  margin-left: 5px;
+}

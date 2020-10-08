@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet"
+    href="./style.css">
+  <title>Practice</title>
+</head>
+<div class="content">
+  <div class="container">
+    <form id="register-form"
+      class="card">
+      <h1>Registration</h1>
+      <div class="form-input required">
+        <label for="email">Email</label>
+        <input type="email"
+          name="email"
+          id="email">
+      </div>
+      <div class="form-input required">
+        <label for="lastname">Last name</label>
+        <input type="text"
+          name="lastname"
+          id="lastname">
+      </div>
+      <div class="form-input required">
+        <label for="firstname">First name</label>
+        <input type="text"
+          name="firstname"
+          id="firstname">
+      </div>
+      <div class="form-input required">
+        <label for="password">Password (at least 8 characters)</label>
+        <input type="password"
+          name="password"
+          id="password">
+      </div>
+      <div class="form-input required">
+        <label for="confirmation">Password confirmation</label>
+        <input type="password"
+          name="confirmation"
+          id="confirmation">
+      </div>
+      <div class="form-input"><label for="phone">Phone number</label>
+        <input type="tel"
+          name="phone"
+          id="phone"></div>
+      <button id="register-btn"
+        type="submit">Register →</button>
+    </form>
+    <div id="errors"
+      class="hidden">
+      <h1>Errors</h1>
+      <ul id="error-list">
+      </ul>
+    </div>
+    <div id="success"
+      class="hidden card">
+      <h1>Success</h1>
+      <p>You have successfully registered.</p>
+      <p></p>
+      <dl></dl>
+      <button onclick="window.location = './index.html'">OK</button>
+    </div>
+  </div>
+</div>
+
+<body>
+  <script src="./main.js"
+    type="module"></script>
+</body>
+
+</html>
