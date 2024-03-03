@@ -30,7 +30,7 @@ form.onsubmit = (ev) => {
   let req = new XMLHttpRequest();
   req.open(
     "GET",
-    `https://us-central1-mdt-gio1.cloudfunctions.net/notUsed?email=${e}`
+    `/notUsed?email=${e}`
   );
   req.send();
   req.onload = () => {
@@ -93,9 +93,13 @@ form.onsubmit = (ev) => {
     const req2 = new XMLHttpRequest();
     req2.open(
       "POST",
-      "https://us-central1-mdt-gio1.cloudfunctions.net/registerUser"
+      "/registerUser"
     );
     req2.onload = () => {
+      if (req2.status !== 200) {
+        console.warn("An error occurred while registering the user : " + req2.response);
+        return;
+      }
       errContainer.classList.add("hidden");
       form.classList.add("hidden");
       const registerOK = document.getElementById("success");
@@ -121,6 +125,7 @@ form.onsubmit = (ev) => {
         registerOK.getElementsByTagName("dl").item(0).append(pdt, pdd);
       }
     };
+    req2.setRequestHeader("Content-Type", "application/json");
     req2.send(
       JSON.stringify({
         email: e,
